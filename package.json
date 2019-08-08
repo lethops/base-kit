@@ -1,20 +1,16 @@
 {
   "name": "@lethops/base-kit",
   "version": "0.0.1-alpha",
-  "description": "",
-  "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.dev.js --mode development",
-    "lint": "eslint ./src/**/**.*",
-    "lint:css": "stylelint 'src/**/*.tsx'",
-    "dev": "webpack-dev-server --config config/webpack.dev.js"
-  },
-  "keywords": [
-    "ui-kit",
-    "design-systems",
-    "react"
-  ],
-  "author": "",
+  "description": "React UI-kit",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://https://github.com/lethops/base-kit.git"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
   "dependencies": {
     "styled-components": "^5.0.0-beta.8"
   },
@@ -59,8 +55,19 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
-  "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
-  }
+  "scripts": {
+    "start": "webpack-dev-server --config ./config/webpack.dev.js --mode development",
+    "lint": "eslint ./src/**/**.*",
+    "lint:css": "stylelint 'src/**/*.tsx'",
+    "dev": "webpack-dev-server --config config/webpack.dev.js"
+  },
+  "author": "Roman Ramanovski",
+  "keywords": [
+    "ui-kit",
+    "design-systems",
+    "react"
+  ],
+  "contributors": [
+    "Roman Ramanovski <roman@lethops.com> (https://github.com/Romroot)"
+  ]
 }
