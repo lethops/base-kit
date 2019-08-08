@@ -1,4 +1,6 @@
-import { generateColor } from "../helpers/styles/color";
+/* eslint-disable @typescript-eslint/camelcase */
+// eslint-disable-next-line import/no-extraneous-dependencies
+import tinycolor from 'tinycolor2';
 
 // TODO implement fade
 
@@ -38,8 +40,8 @@ export const text_color = black; // @text-color: fade(@black, 65%);
 export const text_color_secondary = '#0000005c'; // fade(@black, 45%);
 
 // Border color
-export const border_color_base = 'hsv(0, 0, 85%)'; // base border outline a component
-export const border_color_split = 'hsv(0, 0, 91%)'; // split border inside a component
+export const border_color_base = tinycolor('hsv(0, 0, 85%)').toHexString(); // base border outline a component
+export const border_color_split = tinycolor('hsv(0, 0, 91%)').toHexString(); // split border inside a component
 export const border_color_inverse = white;
 export const border_width_base = '1px'; // width of the border for a component
 export const border_style_base = 'solid'; // style of a components border
@@ -49,13 +51,13 @@ export const outline_blur_size = 0;
 export const outline_width = '2px';
 export const outline_color = primary_color;
 
-export const background_color_light = 'hsv(0, 0, 98%)'; // background of header and selected item
-export const background_color_base = 'hsv(0, 0, 96%)';
+export const background_color_light = tinycolor('hsv(0, 0, 98%)').toHexString(); // background of header and selected item
+export const background_color_base = tinycolor('hsv(0, 0, 96%)').toHexString();
 
 // Disabled states
 export const disabled_color = '#000'; // fade(#000, 25%);
 export const disabled_bg = background_color_base;
-export const disabled_color_dark = background_color_base; //fade(#fff, 35%);
+export const disabled_color_dark = background_color_base; // fade(#fff, 35%);
 
 // vertical paddings
 export const padding_lg = '24px'; // containers

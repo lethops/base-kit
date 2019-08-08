@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { t, dt } from '../../../helpers/styles';
 
-const btnBase = css`
+const btnBase = css<any>`
   position: relative;
   display: inline-block;
   font-weight: ${t('btn_font_weight')};
@@ -14,6 +14,7 @@ const btnBase = css`
   transition: all 0.3s ${t('ease_base_in')};
   user-select: none;
   touch-action: manipulation;
+  width: ${props => (props.block ? '100%' : 'initial')};
 
   :active,
   :focus {
@@ -33,6 +34,22 @@ const btnBase = css`
       pointer-events: none;
     }
   }
+
+  &::before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    z-index: 1;
+    display: none;
+    background: ${t('component_background')};
+    border-radius: inherit;
+    opacity: 0.35;
+    transition: opacity 0.2s;
+    content: '';
+    pointer-events: none;
+  }
 `;
 
 const btnSize = css`
@@ -49,15 +66,15 @@ const btnColor = css`
 
   &:hover,
   &:focus {
-    color: ${dt('btn_color', 'color')};
-    background-color: ${dt('btn_bg', 'color')};
-    border-color: ${dt('btn_border', 'color')};
+    color: ${dt('btn_color_active', 'color')};
+    background-color: ${dt('btn_bg_hovered', 'color')};
+    border-color: ${dt('btn_border_hovered', 'color')};
   }
   &:active,
   &.active {
-    color: ${dt('btn_color', 'color')};
-    background-color: ${dt('btn_bg', 'color')};
-    border-color: ${dt('btn_border', 'color')};
+    color: ${dt('btn_color_active', 'color')};
+    background-color: ${dt('btn_bg_active', 'color')};
+    border-color: ${dt('btn_border_active', 'color')};
   }
 `;
 

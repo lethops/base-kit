@@ -1,4 +1,5 @@
 const merge = require("webpack-merge");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const common = require("./webpack.core.js");
 
 module.exports = merge(common, {
@@ -10,5 +11,10 @@ module.exports = merge(common, {
     overlay: true,
     open: true,
     stats: "errors-only"
-  }
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: path.resolve(__dirname, "../public", "index.html")
+    })
+  ],
 });

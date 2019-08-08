@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tinycolor from 'tinycolor2';
 
 /**
@@ -6,15 +7,15 @@ import tinycolor from 'tinycolor2';
  * @param index
  */
 export function generateColor(color: any, index: any) {
-  let hueStep = 2;
-  let saturationStep = 16;
-  let saturationStep2 = 5;
-  let brightnessStep1 = 5;
-  let brightnessStep2 = 15;
-  let lightColorCount = 5;
-  let darkColorCount = 4;
+  const hueStep = 2;
+  const saturationStep = 16;
+  const saturationStep2 = 5;
+  const brightnessStep1 = 5;
+  const brightnessStep2 = 15;
+  const lightColorCount = 5;
+  const darkColorCount = 4;
 
-  let getHue = function(hsv: any, i: any, isLight: any) {
+  const getHue = function(hsv: any, i: any, isLight: any) {
     let hue;
     if (hsv.h >= 60 && hsv.h <= 240) {
       hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
@@ -28,7 +29,7 @@ export function generateColor(color: any, index: any) {
     }
     return Math.round(hue);
   };
-  let getSaturation = function(hsv: any, i: any, isLight: any) {
+  const getSaturation = function(hsv: any, i: any, isLight: any) {
     let saturation;
     if (isLight) {
       saturation = Math.round(hsv.s * 100) - saturationStep * i;
@@ -48,16 +49,16 @@ export function generateColor(color: any, index: any) {
     }
     return Math.round(saturation);
   };
-  let getValue = function(hsv: any, i: any, isLight: any) {
+  const getValue = function(hsv: any, i: any, isLight: any) {
     if (isLight) {
       return Math.round(hsv.v * 100) + brightnessStep1 * i;
     }
     return Math.round(hsv.v * 100) - brightnessStep2 * i;
   };
 
-  let isLight = index <= 6;
-  let hsv = tinycolor(color).toHsv();
-  let i = isLight ? lightColorCount + 1 - index : index - lightColorCount - 1;
+  const isLight = index <= 6;
+  const hsv = tinycolor(color).toHsv();
+  const i = isLight ? lightColorCount + 1 - index : index - lightColorCount - 1;
   return tinycolor({
     h: getHue(hsv, i, isLight),
     s: getSaturation(hsv, i, isLight),

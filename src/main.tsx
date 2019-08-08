@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import Button from './components/Button';
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
-import { generateColor } from './helpers/styles/color';
-import { primary_color } from './theme/theme';
 
 const Main = () => {
   return (
@@ -24,6 +22,9 @@ const Main = () => {
       <br />
       <br />
       <Button>HHHHH</Button>
+      <br />
+      <br />
+      <Button color="disable">HHHHH</Button>
     </div>
   );
 };
