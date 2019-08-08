@@ -1,0 +1,66 @@
+{
+  "name": "base-kit",
+  "version": "0.0.1-alpha",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --config ./config/webpack.dev.js --mode development",
+    "lint": "eslint ./src/**/**.*",
+    "lint:css": "stylelint 'src/**/*.tsx'",
+    "dev": "webpack-dev-server --config config/webpack.dev.js"
+  },
+  "keywords": [
+    "ui-kit",
+    "design-systems",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "styled-components": "^5.0.0-beta.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.4.0",
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.3",
+    "@types/styled-components": "^4.1.12",
+    "@types/tinycolor2": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-typescript": "^0.14.0",
+    "eslint-watch": "^6.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "1.17.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-styleguidist": "^9.0.4",
+    "source-map-explorer": "^1.8.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "tinycolor2": "^1.4.1",
+    "typescript": "^3.5.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  }
+}
