@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 const common = require('./webpack.core.js');
 
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // new BundleAnalyzerPlugin()
 
 module.exports = merge(common, {
@@ -40,10 +40,11 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin(),
   ],
   optimization: {
     minimizer: [
@@ -52,7 +53,9 @@ module.exports = merge(common, {
         parallel: true,
         sourceMap: true,
         uglifyOptions: {
-          warnings: false,
+          compress: true,
+          ecma: 6,
+          mangle: true,
         },
       }),
     ],

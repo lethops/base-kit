@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './components/Button';
 import { ThemeProvider } from 'styled-components';
-import theme from './theme';
+import { Button, theme } from './';
 
 const Main = () => {
   return (

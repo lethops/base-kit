@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import tinycolor from 'tinycolor2';
+const tinycolor = require('tinycolor2');
 
 /**
  * Inspired by ant.design color generator

@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/camelcase */
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable */
 import tinycolor from 'tinycolor2';
 
 // TODO implement fade

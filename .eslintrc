@@ -99,7 +99,7 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [".jsx", ".tsx"]
       }
     ],
     "jsx-a11y/anchor-is-valid": [

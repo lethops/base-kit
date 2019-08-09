@@ -12,6 +12,7 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
+    "preval.macro": "^3.0.0",
     "styled-components": "^5.0.0-beta.8"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.4.0",
+    "@types/preval.macro": "^3.0.0",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.3",
     "@types/styled-components": "^4.1.12",
@@ -28,6 +30,8 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-macros": "^2.6.1",
+    "babel-plugin-preval": "^3.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.1",
@@ -50,6 +54,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0",
     "tinycolor2": "^1.4.1",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.29.6",
@@ -62,7 +67,8 @@
     "lint": "eslint ./src/**/**.*",
     "lint:css": "stylelint 'src/**/*.tsx'",
     "dev": "webpack-dev-server --config config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.prod.js"
+    "build": "webpack --config ./config/webpack.prod.js",
+    "calculate:theme": "ts-node ./scripts/generateTheme.ts"
   },
   "author": "Roman Ramanovski",
   "keywords": [
