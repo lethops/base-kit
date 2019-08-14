@@ -8,8 +8,9 @@ import {
   error_color,
   primary_color,
   text_color,
-} from '../../../theme/theme';
-import { generateColor } from '../../../helpers/styles/color';
+} from '../../../../theme/theme';
+import { generateColor } from '../../../../helpers/styles/color';
+
 
 export const btn_color_base = text_color;
 export const btn_bg_base = component_background;

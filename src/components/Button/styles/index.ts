@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components';
+import sf from 'sf';
+import * as theme from './theme';
 import { t, dt } from '../../../helpers/styles';
 
 const btnBase = css<any>`
   position: relative;
   display: inline-block;
-  font-weight: ${t('btn_font_weight')};
+  font-weight: ${sf(theme.btn_font_size_base)};
   white-space: nowrap;
   text-align: center;
   background-image: none;
@@ -60,7 +62,7 @@ const btnSize = css`
 `;
 
 const btnColor = css`
-  color: ${dt('btn_color', 'color')};
+  color: ${sf(theme.btn_color, 'color')};
   background-color: ${dt('btn_bg', 'color')};
   border-color: ${dt('btn_border', 'color')};
 

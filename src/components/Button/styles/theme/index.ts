@@ -8,8 +8,10 @@ import {
   font_size_lg,
   font_size_base,
   padding_xs,
-} from '../../../theme/theme';
-import { generateColor } from '../../../helpers/styles/color';
+  text_color,
+  disabled_color,
+} from '../../../../theme/theme';
+import { generateColor } from '../../../../helpers/styles/color';
 
 export const btn_font_weight = 400;
 export const btn_border_width = border_width_base;
@@ -40,4 +42,11 @@ export const btn_font_size_sm = font_size_base;
 export const btn_circle_size_base = btn_height_base;
 export const btn_circle_size_lg = btn_height_lg;
 export const btn_circle_size_sm = btn_height_sm;
+
+export const btn_color = {
+  base: text_color,
+  primary: '#fff',
+  disable: disabled_color,
+  danger: '#fff',
+};
 // end `btnSize`

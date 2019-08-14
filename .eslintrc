@@ -37,6 +37,12 @@
   "rules": {
     "linebreak-style": "off",
     "no-console": 0,
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["sf"]
+      }
+    ],
     "react/destructuring-assignment": "off",
     "import/no-useless-path-segments": "off",
     "import/prefer-default-export": "off",
