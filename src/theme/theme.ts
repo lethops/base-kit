@@ -28,12 +28,17 @@ export const font_family = `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ping
     'Segoe UI Emoji', 'Segoe UI Symbol'`;
 export const text_color_inverse = white;
 export const icon_color = 'inherit';
-export const border_radius_base = '4px';
-export const border_radius_sm = '2px';
 
-export const font_size_base = '14px';
-export const font_size_lg = '16px';
-export const font_size_sm = '12px';
+export const border_radius = {
+  base: '4px',
+  sm: '4px',
+  lg: '8px',
+};
+export const font_size = {
+  base: '14px',
+  lg: '16px',
+  sm: '12px',
+};
 
 export const text_color = black; // @text-color: fade(@black, 65%);
 export const text_color_secondary = '#0000005c'; // fade(@black, 45%);
@@ -42,7 +47,7 @@ export const text_color_secondary = '#0000005c'; // fade(@black, 45%);
 export const border_color_base = tinycolor('hsv(0, 0, 85%)').toHexString(); // base border outline a component
 export const border_color_split = tinycolor('hsv(0, 0, 91%)').toHexString(); // split border inside a component
 export const border_color_inverse = white;
-export const border_width_base = '1px'; // width of the border for a component
+export const border_width_base = '1px';
 export const border_style_base = 'solid'; // style of a components border
 
 // Outline
@@ -58,11 +63,12 @@ export const disabled_color = '#000'; // fade(#000, 25%);
 export const disabled_bg = background_color_base;
 export const disabled_color_dark = background_color_base; // fade(#fff, 35%);
 
-// vertical paddings
-export const padding_lg = '24px'; // containers
-export const padding_md = '16px'; // small containers and buttons
-export const padding_sm = '12px'; // Form controls and items
-export const padding_xs = '8px'; // small items
+export const padding = {
+  base: '16px', // small containers and buttons
+  lg: '24px', // vertical paddings
+  sm: '12px', // Form controls and items
+  xs: '8px', // small items
+};
 
 // Animation
 export const ease_base_out = 'cubic-bezier(0.7, 0.3, 0.1, 1)';
